@@ -1,0 +1,480 @@
+
+<!doctype html>
+<html lang=en>
+<head>
+<title>DroneWorkz Imagens Aéreas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+body { margin: 0; background: #000;}
+p, ul {font-family: "Raleway", sans-serif;font-size: 1.2rem;list-style-type: square;}
+body, html {height: 100%;line-height: 1.8;}
+video { 
+position: fixed;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+-moz-transform: translateX(-50%) translateY(-50%);
+-ms-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url('images/bg.jpg') no-repeat; background-size: cover;  -webkit-transition: 1s opacity; transition: 1s opacity; }
+/*For IE*/
+video { display: block; }
+
+
+/*div { font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;   
+font-weight: 100; background: rgba(0,0,0,0.3); color: white; padding: 2rem; width: 66%; margin: 2rem; float: center; font-size: 1.2rem; }*/
+/*h1 { font-size: 3rem; text-transform: uppercase; margin-top: 0; letter-spacing: .3rem; }*/
+/*a { display: inline-block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); 
+padding: .5rem; -webkit-transition: .6s background; transition: .6s background; }
+a:hover { background: rgba(0,0,0,0.9); }*/
+.stopfade { opacity: .5; }
+#PausarVideo { 
+/*  display: block;
+  width: 100px;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  -webkit-transition: .3s background;
+  transition: .3s background;*/
+}
+#PausarVideo:hover { 
+   background: rgba(0,0,0,0.5);
+}
+
+
+}
+@media all and (max-device-width: 800px) {
+  body { background: url("images/bg.jpg") #000 no-repeat center center fixed; background-size: cover; }
+  #bgvid, #PausarVideo { display: none; }
+}
+
+
+#myNavbar, #navDemo {font-family: "Orbitron", sans-serif; font-weight: bold;}
+h1, h2, h3, h4, h5, h6 {font-family: "Orbitron", sans-serif; font-weight: bold;text-transform: uppercase;}
+
+ .rightshadow {box-shadow: 2px 0px 2px 0 rgba(0, 0, 0, 0.1);
+
+ }
+ .rightshadow img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover
+ }
+
+.calltoaction { 
+  display: block;
+  width: 75%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto;/**/ 
+}
+
+section {margin-bottom:-10px!important}
+section a {font-family: "Raleway", sans-serif;font-size: 1.2rem;}
+
+/*Image captions*/
+.wp-caption {
+position: relative;
+padding: 0;
+margin: 0;
+}
+.wp-caption img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+.wp-caption-text {
+opacity: 0;
+position: absolute;
+width: 100%;
+color: #fff;
+left: 0;
+bottom: 0;
+padding: 0.75em 1em;
+z-index: 2;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+background-color: rgba(0,0,0,.7);
+-webkit-transition: opacity .3s ease-in-out;
+transition: opacity .3s ease-in-out;
+}
+.wp-caption:hover .wp-caption-text {
+opacity: 1;
+}
+/*END image captions*/
+
+</style>
+<meta charset=utf-8>
+</head>
+
+
+
+<body>
+<video playsinline autoplay muted loop poster="images/bg.jpg" id="bgvid">
+<source src="images/test.webm" type="video/webm">
+<source src="images/test.mp4" type="video/mp4">
+</video> 
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-panel w3-center" id="myNavbar">
+  <div class="w3-bar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button w3-hover-black w3-hover-opacity w3-hide-small"><i class="fa fa-home"></i>&nbsp;</a>
+    <a href="#servicos" class="w3-bar-item w3-button w3-hover-black w3-hover-opacity w3-hide-small">SERVIÇOS</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hover-black w3-hover-opacity w3-hide-small">PORTFÓLIO</a>
+    <a href="#contato" class="w3-bar-item w3-button w3-hover-black w3-hover-opacity w3-hide-small">CONTATO</a>
+    <button class="w3-bar-item w3-btn w3-hide-small w3-hover-black w3-hover-opacity w3-tooltip w3-border w3-border-dark-gray" id="PausarVideo" title="Pausar o vídeo">|&nbsp;|<span class="w3-text">&nbsp;&nbsp;Pausar o vídeo</span></button>
+  </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+    <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">INÍCIO</a>
+    <a href="#servicos" class="w3-bar-item w3-button" onclick="toggleFunction()">SERVIÇOS</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFÓLIO</a>
+    <a href="#contato" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTATO</a>
+  </div>
+</div>
+
+<div class="w3-display-container w3-center w3-mobile" style="height:100%" id="home">
+  	<div class="w3-display-middle" style="white-space:nowrap;">
+    		<span class="w3-center"><img src="images/droneworkz.png" width="240px" alt="DroneWorkz">&nbsp;</span>
+  	</div>
+</div>
+
+<div class="w3-mobile" id="polina" style="">
+
+
+
+<section class="w3-opacity-min w3-black w3-container" style="">
+
+<div class="w3-content w3-padding-64">
+<h1 class="w3-center">Drone<wbr>Workz Imagens Aéreas</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+<p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+</div>
+
+</section>
+
+
+
+
+<section class="w3-white" id="servicos">
+<div class="w3-content">
+
+	<h2 class="w3-padding-64" style="padding-left:16px; padding-right:16px;">SERVIÇOS</h2>
+
+
+<div class="w3-row w3-white w3-card w3-margin">
+  <div class="w3-col m5 l4 w3-card rightshadow w3-hover-grayscale">
+    <img src="https://images.pexels.com/photos/286744/pexels-photo-286744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+  </div>
+  <div class="w3-col w3-container m7 l8">  
+    <h3 class="w3-center">Mercado Imobiliário</h3>
+    <p class="w3-center">Descubra todo o potencial do seu empreendimento!</p>
+    <ul class="">
+        <li>Imagem aérea do empreendimento</li>
+        <li>Imagens da vizinhança do empreendimento</li>
+    </ul>
+  </div>
+</div>
+
+<div class="w3-row w3-white w3-card w3-margin">
+  <div class="w3-col m5 l4 w3-card rightshadow">
+    <img src="https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+  </div>
+  <div class="w3-col w3-container m7 l8">  
+    <h3 class="w3-center">Campanhas Publicitárias</h3>
+    <p>Que tal incrementar sua produção com imagens impressionantes e criativas?<br>Agende hoje mesmo sua visita, sem compromisso!</p>
+    <a href="#contato" class="w3-button w3-center w3-dark-gray calltoaction">Entre em contato</a>
+  </div>
+</div>
+
+<div class="w3-row w3-white w3-card w3-margin">
+  <div class="w3-col m5 l4 w3-card rightshadow">
+    <img src="https://images.pexels.com/photos/1085695/pexels-photo-1085695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+  </div>
+  <div class="w3-col w3-container m7 l8">  
+    <h3 class="w3-center">Agricultura</h3>
+    <p>Agora, você pode ter imagens em alta resolução de sua propriedade e plantação sem precisar contratar aeronaves de grande porte que envolvem um alto investimento.</p>
+  </div>
+</div>
+
+<div class="w3-row w3-white w3-card w3-margin">
+  <div class="w3-col m5 l4 w3-card rightshadow">
+    <img src="https://t3.ftcdn.net/jpg/01/11/23/76/240_F_111237689_WHkOJrldYotB3oMzd1NowOmAigrV54ZR.jpg" alt="">
+  </div>
+  <div class="w3-col w3-container m7 l8">  
+    <h3 class="w3-center">Casamentos</h3>
+    <p>Tenha uma recordação inesquecível do dia mais importante da sua vida com fotos e vídeos que deixarão seus amigos e parentes sem palavras!</p>
+  </div>
+</div>
+
+<div class="w3-row w3-white w3-card w3-margin">
+  <div class="w3-col m5 l4 w3-card rightshadow">
+    <img src="https://images.pexels.com/photos/203555/pexels-photo-203555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+  </div>
+  <div class="w3-col w3-container m7 l8">  
+    <h3 class="w3-center">Esportes</h3>
+    <p>Já pensou em ter toda a adrenalina do seu esporte registrada em vídeos e fotos de alta resolução?</p>
+  </div>
+</div>
+<div class="w3-padding-64"></div>
+
+
+</div>
+</section>
+
+
+
+
+
+<section class="w3-black" id="portfolio">
+<div class="w3-padding-64">
+	<h2 class="w3-padding w3-content">Portfólio</h2>
+
+<div class="w3-content w3-padding-32">
+<p class="w3-panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.</p>
+</div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding" style="margin-top:16px; margin-bottom:0px">
+    <div class="w3-half">
+     <figure class="wp-caption">
+      <img class="demo" src="https://www.w3schools.com/w3images/kitchenconcrete.jpg" style="width:100%; margin-bottom:16px" onclick="document.getElementById('v01').style.display='block'" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.">
+      <figcaption class="wp-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</figcaption>
+     </figure>
+     <div id="v01" class="w3-modal w3-animate-opacity">
+      <div class="w3-modal-content w3-animate-opacity">
+       <header class="w3-container w3-black"> 
+        <span onclick="document.getElementById('v01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Header</h2>
+       </header>
+       <div class="w3-container w3-center">
+        <iframe width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+       </div>
+      </div>
+     </div>
+     
+     <figure class="wp-caption">
+      <img class="demo" src="https://www.w3schools.com/w3images/livingroom.jpg" style="width:100%; margin-bottom:16px" onclick="onClick(this)" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.">
+      <figcaption class="wp-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</figcaption>
+     </figure>
+     <figure class="wp-caption">
+      <img class="demo" src="https://www.w3schools.com/w3images/diningroom.jpg" style="width:100%; margin-bottom:16px" onclick="onClick(this)" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.">
+      <figcaption class="wp-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</figcaption>
+     </figure>
+    </div>
+
+    <div class="w3-half">
+     <figure class="wp-caption">
+      <img class="demo" src="https://www.w3schools.com/w3images/atrium.jpg" style="width:100%; margin-bottom:16px" onclick="onClick(this)" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.">
+      <figcaption class="wp-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</figcaption>
+     </figure>
+     <figure class="wp-caption">
+      <img class="demo" src="https://www.w3schools.com/w3images/bedroom.jpg" style="width:100%; margin-bottom:16px" onclick="onClick(this)" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.">
+      <figcaption class="wp-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</figcaption>
+     </figure>
+     <figure class="wp-caption">
+      <img class="demo" src="https://www.w3schools.com/w3images/livingroom2.jpg" style="width:100%; margin-bottom:16px" onclick="onClick(this)" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.">
+      <figcaption class="wp-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</figcaption>
+     </figure>
+    </div>
+
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+<div class="w3-content w3-padding-64">
+<p class="w3-panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.</p>
+</div>
+
+
+
+</div>
+</section>
+
+
+
+
+
+<!-- Contact Container -->
+<section id="contato" class="w3-padding-64" style="background: rgba(0,0,0,0.5);">
+<div class="w3-content w3-padding-64" id="contact">
+  <div class="w3-row">
+    <div class="w3-panel w3-col m5 w3-text-white">
+      <h2>Contato</h2>
+      <p>Agende já sua visita, sem compromisso!</p>
+      <p><i class="fa fa-map-marker w3-text-black w3-xlarge"></i>&nbsp;&nbsp;R. Sem Nome, 100 - Parobé, RS</p>
+      <p><i class="fa fa-whatsapp w3-text-black w3-xlarge"></i>&nbsp;&nbsp;+00 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-black w3-xlarge"></i>&nbsp;&nbsp;leo@droneworkz.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Nome</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>E-mail</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Mensagem</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <button class="w3-button w3-black w3-right w3-section" type="submit"><i class="fa fa-paper-plane"></i> ENVIAR</button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Google Maps -->
+<div id="googleMap" style="width:100%;height:420px;"></div>
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(-29.650131,-50.815204);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV13qag_Soz4vLjMRCtY9iOtV-46ukKfg&callback=myMap"></script>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black">
+  <h4>Siga a DroneWorkz</h4>
+  <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="YouTube"><i class="fa fa-youtube"></i></a>
+  <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+</footer>
+
+
+
+
+
+
+
+
+</div>
+<script>
+var video = document.getElementById("bgvid"),
+pauseButton = document.querySelector("#PausarVideo");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Pausado";
+}
+
+function vidFade() {
+  video.classList.add("stopfade");
+}
+
+video.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+video.pause();
+vidFade();
+}, false); 
+ 
+pauseButton.addEventListener("click", function() {
+  video.classList.toggle("stopfade");
+  if (video.paused) {
+    video.play();
+    pauseButton.innerHTML = "|&nbsp;|";
+  } else {
+    video.pause();
+    pauseButton.innerHTML = "Pausado";
+  }
+}, false);
+
+
+</script>
+
+
+<!--[if lt IE 9]>
+<script>
+	document.createElement('video');
+</script>
+<![endif]-->
+
+<script>
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black" + " w3-center";
+    } else {
+        navbar.className = navbar.className.replace(" w3-center w3-card w3-animate-top w3-black", "");
+    }
+}
+</script>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+<script type="text/javascript">
+// Modal Image Gallery
+//function onClick(element) {
+//  document.getElementById("img01").src = element.src;
+//  document.getElementById("modal01").style.display = "block";
+//  var captionText = document.getElementById("caption");
+//  captionText.innerHTML = element.alt;
+}
+</script>
+
+
+</body>
+</html>
