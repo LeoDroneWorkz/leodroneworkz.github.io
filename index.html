@@ -13,6 +13,28 @@
 body { margin: 0; background: #000;}
 p, ul {font-family: "Raleway", sans-serif;font-size: 1.2rem;list-style-type: square;}
 body, html {height: 100%;line-height: 1.8;}
+
+
+/* Button used to open the chat - fixed at the bottom of the page */
+.open-button {
+/*  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8; */
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 60px;
+  height:60px;
+  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+  background-color: #435A64;
+  z-index: 9;
+}
+
+
+
 video { 
 position: fixed;
 top: 50%;
@@ -160,6 +182,19 @@ opacity: 1;
   	</div>
 </div>
 
+
+
+
+
+
+
+<button class="open-button w3-btn w3-circle w3-large"><a href="https://wa.me/1XXXXXXXXXX"><i class="fa fa-whatsapp w3-text-white w3-xlarge w3-center"></i></a></button>
+
+
+
+
+
+
 <div class="w3-mobile" id="polina" style="">
 
 
@@ -217,7 +252,6 @@ opacity: 1;
     <p>Agora, você pode ter imagens em alta resolução de sua propriedade e plantação sem precisar contratar aeronaves de grande porte que envolvem um alto investimento.</p>
   </div>
 </div>
-
 
 <div class="w3-row w3-white w3-card w3-margin">
   <div class="w3-col m5 l4 w3-card rightshadow">
@@ -436,7 +470,7 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black" + " w3-center";
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black" + " w3-opacity-min" + " w3-center";
     } else {
         navbar.className = navbar.className.replace(" w3-center w3-card w3-animate-top w3-black", "");
     }
