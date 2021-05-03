@@ -205,7 +205,7 @@ opacity: 1;
 
 
 
-<button class="open-button w3-btn w3-circle w3-large"><a href="https://wa.me/1XXXXXXXXXX"><i class="fa fa-whatsapp w3-text-white w3-xlarge w3-center"></i></a></button>
+<button class="open-button w3-btn w3-circle w3-large"><a href="https://wa.me/5551995409505"><i class="fa fa-whatsapp w3-text-white w3-xlarge w3-center"></i></a></button>
 
 
 
@@ -310,25 +310,26 @@ opacity: 1;
   <!-- Photo grid -->
   <div class="w3-row">
     <div class="w3-third">
-      <img src="https://www.w3schools.com/w3images/kitchenconcrete.jpg" style="width:100%" onclick="document.getElementById('v01').style.display='block'" alt="">
-      <img src="https://www.w3schools.com/w3images/livingroom.jpg" style="width:100%" onclick="document.getElementById('v02').style.display='block'"  alt="">
-      <img src="https://www.w3schools.com/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="https://www.w3schools.com/w3images/livingroom2.jpg" style="width:100%" onclick="document.getElementById('v01').style.display='block'" alt="">
+      <img src="https://img.youtube.com/vi/10NAHHWf4dg/maxresdefault.jpg" style="width:100%" onclick="document.getElementById('v02').style.display='block'"  alt="">
+      <img src="https://www.w3schools.com/w3images/diningroom.jpg" style="width:100%" onclick="document.getElementById('v03').style.display='block'" alt="">
     </div>
 
     <div class="w3-third">
-      <img src="https://www.w3schools.com/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="https://www.w3schools.com/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="https://www.w3schools.com/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="https://www.w3schools.com/w3images/diningroom.jpg" style="width:100%" onclick="document.getElementById('v04').style.display='block'" alt="">
+      <img src="https://img.youtube.com/vi/Zad822og5E0/maxresdefault.jpg" style="width:100%" onclick="document.getElementById('v05').style.display='block'" alt="">
+      <img src="https://img.youtube.com/vi/xU1qZz2S1Fk/maxresdefault.jpg" style="width:100%" onclick="document.getElementById('v06').style.display='block'" alt="">
     </div>
     
     <div class="w3-third">
-      <img src="https://www.w3schools.com/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="https://www.w3schools.com/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="https://www.w3schools.com/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="https://img.youtube.com/vi/el9QjZsb8-w/maxresdefault.jpg" style="width:100%" onclick="document.getElementById('v07').style.display='block'" alt="">
+      <img src="https://www.w3schools.com/w3images/livingroom2.jpg" style="width:100%" onclick="document.getElementById('v08').style.display='block'" alt="">
+      <img src="https://img.youtube.com/vi/MVdl4-HTT7c/maxresdefault.jpg" style="width:100%" onclick="document.getElementById('v09').style.display='block'" alt="">
     </div>
   </div>
   
   <!-- Modal for full size images on click-->
+  <!--
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -336,6 +337,7 @@ opacity: 1;
       <p id="caption"></p>
     </div>
   </div>
+  -->
 
 <script>
 // Modal Image Gallery
@@ -345,11 +347,13 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
 //Reload iframe
-function refreshIframe() {
-    var ifr = document.getElementsByName('if01')[0];
-    ifr.src = ifr.src;
-}
+ //function refreshIframe() {
+ //   var ifr = document.getElementsByName('if01')[0];
+ //   ifr.src = ifr.src;
+ //}
+
 </script>
 
 
@@ -359,18 +363,143 @@ function refreshIframe() {
   <div id="v01" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="refreshIframe();document.getElementById('v01').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span onclick="var ifr=document.getElementById('if01'); ifr.src=ifr.src; document.getElementById('v01').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe name="if01" width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a></p></div>
+        <iframe id="if01" width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Modal for 2nd image on click-->
+  <div id="v02" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if02'); ifr.src=ifr.src; document.getElementById('v02').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if02" width="100%" height="315px" src="https://www.youtube.com/embed/10NAHHWf4dg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/10NAHHWf4dg?rel=0" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Modal for 3rd image on click-->
+  <div id="v03" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if03'); ifr.src=ifr.src; document.getElementById('v03').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if03" width="100%" height="315px" src="https://www.youtube.com/embed/Y02vIKdfeRc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=Y02vIKdfeRc" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Modal for 4th image on click-->
+  <div id="v04" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if04'); ifr.src=ifr.src; document.getElementById('v04').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if04" width="100%" height="315px" src="https://www.youtube.com/embed/E7k80Q1TV5g?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=E7k80Q1TV5g" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
      
 
-  <!-- Modal for 2nd image on click-->
+
+  <!-- Modal for 5th image on click-->
+  <div id="v05" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if05'); ifr.src=ifr.src; document.getElementById('v05').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if05" width="100%" height="315px" src="https://www.youtube.com/embed/Zad822og5E0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=Zad822og5E0" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+     
+
+
+  <!-- Modal for 6th image on click-->
+  <div id="v06" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if06'); ifr.src=ifr.src; document.getElementById('v06').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if06" width="100%" height="315px" src="https://www.youtube.com/embed/xU1qZz2S1Fk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=xU1qZz2S1Fk" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+     
+
+  <!-- Modal for 7th image on click-->
+  <div id="v07" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if07'); ifr.src=ifr.src; document.getElementById('v07').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if07" width="100%" height="315px" src="https://www.youtube.com/embed/el9QjZsb8-w?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=el9QjZsb8-w" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+     
+
+  <!-- Modal for 8th image on click-->
+  <div id="v08" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if08'); ifr.src=ifr.src; document.getElementById('v08').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if08" width="100%" height="315px" src="https://www.youtube.com/embed/xU1qZz2S1Fk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=xU1qZz2S1Fk" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+     
+
+  <!-- Modal for 9th image on click-->
+  <div id="v09" class="w3-modal w3-animate-opacity">
+   <div class="w3-modal-content w3-animate-opacity">
+     <header class="w3-container w3-black"> 
+        <span onclick="var ifr=document.getElementById('if09'); ifr.src=ifr.src; document.getElementById('v09').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <h6><i class="fa fa-play"></i></h6>
+     </header>
+    <div class="w3-container w3-center w3-black">
+        <iframe id="if09" width="100%" height="315px" src="https://www.youtube.com/embed/MVdl4-HTT7c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=MVdl4-HTT7c" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+    </div>
+   </div>
+  </div>
+     
+
+
+
+
+
+
+
+  <!-- Modal for 2nd image on click-->  <!--
   <div id="v02" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -378,6 +507,7 @@ function refreshIframe() {
       <p id="caption"></p>
     </div>
   </div>
+-->
 
 
 
@@ -391,6 +521,7 @@ function refreshIframe() {
 
 
   <!-- Photo grid (modal) -->
+<!--
   <div class="w3-row-padding" style="margin-top:16px; margin-bottom:0px">
     <div class="w3-half">
      <figure class="wp-caption">
@@ -427,6 +558,7 @@ function refreshIframe() {
   </div>
 
   <!-- Modal for full size images on click-->
+<!--
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -434,7 +566,7 @@ function refreshIframe() {
       <p id="caption"></p>
     </div>
   </div>
-
+-->
 
 <div class="w3-content w3-padding-64">
 <p class="w3-panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.</p>
@@ -453,12 +585,14 @@ function refreshIframe() {
 <section id="contato" class="w3-padding-64" style="background: rgba(0,0,0,0.5);">
 <div class="w3-content w3-padding-64" id="contact">
   <div class="w3-row">
-    <div class="w3-panel w3-col m5 w3-text-white">
+    <div class="w3-panel w3-col m8 w3-text-black w3-white w3-opacity-min w3-card">
       <h2>Contato</h2>
       <p>Agende já sua visita, sem compromisso!</p>
-      <p><i class="fa fa-map-marker w3-text-black w3-xlarge"></i>&nbsp;&nbsp;R. Sem Nome, 100 - Parobé, RS</p>
-      <p><i class="fa fa-whatsapp w3-text-black w3-xlarge"></i>&nbsp;&nbsp;+00 1515151515</p>
-      <p><i class="fa fa-envelope-o w3-text-black w3-xlarge"></i>&nbsp;&nbsp;leo@droneworkz.com</p>
+      <p>&nbsp;<a href="https://wa.me/5551995409505" style="text-decoration:none;"><i class="fa fa-whatsapp w3-text-black w3-xlarge"></i>&nbsp;&nbsp;Enviar mensagem pelo <u>WhatsApp</u> agora</a></p>
+      <p>&nbsp;<a href="tel:51995409505" style="text-decoration:none;"><i class="fa fa-phone w3-text-black w3-xlarge"></i>&nbsp;&nbsp;Ligue agora: <u>51 99540-9505</u></a></p>
+      <p><i class="fa fa-envelope-o w3-text-black w3-xlarge"></i>&nbsp;&nbsp;Ou envie um e-mail para: <a href="mailto:">leo@droneworkz.com</a></p>
+      <br>
+      <p>&nbsp;&nbsp;<i class="fa fa-map-marker w3-text-black w3-xlarge"></i>&nbsp;&nbsp;&nbsp;Atendemos toda Parobé, RS e região</p>
     </div>
     <div class="w3-col m7">
     </div>
@@ -472,7 +606,7 @@ function refreshIframe() {
 <footer class="w3-container w3-padding-64 w3-center w3-black">
   <h4>Siga a DroneWorkz</h4>
   <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="YouTube"><i class="fa fa-youtube"></i></a>
+  <a class="w3-button w3-xxlarge w3-black" href="https://www.youtube.com/channel/UCeIYjgHcBQA8cQj-N0RmGgw/featured" title="YouTube"><i class="fa fa-youtube"></i></a>
   <a class="w3-button w3-xxlarge w3-black" href="javascript:void(0)" title="Instagram"><i class="fa fa-instagram"></i></a>
 </footer>
 
