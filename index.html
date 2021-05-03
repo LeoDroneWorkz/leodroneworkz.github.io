@@ -345,6 +345,11 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+//Reload iframe
+function refreshIframe() {
+    var ifr = document.getElementsByName('if01')[0];
+    ifr.src = ifr.src;
+}
 </script>
 
 
@@ -387,12 +392,13 @@ function onClick(element) {
      <div id="v01" class="w3-modal w3-animate-opacity">
       <div class="w3-modal-content w3-animate-opacity">
        <header class="w3-container w3-black"> 
-        <span onclick="document.getElementById('v01').style.display='none'" 
+        <span onclick="refreshIframe();document.getElementById('v01').style.display='none'" 
         class="w3-button w3-display-topright">&times;</span>
         <h6>...</h6>
        </header>
        <div class="w3-container w3-center w3-black">
-        <iframe width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe name="if01" width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div><a href="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" target="_blank">Assistir no YouTube</a></div>
        </div>
       </div>
      </div>
