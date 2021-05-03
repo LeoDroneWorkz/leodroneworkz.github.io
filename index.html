@@ -11,7 +11,7 @@
 
 <style>
 body { margin: 0; background: #000;}
-p, ul {font-family: "Raleway", sans-serif;font-size: 1.2rem;list-style-type: square;}
+p, span, ul {font-family: "Raleway", sans-serif;font-size: 1.2rem;list-style-type: square;}
 body, html {height: 100%;line-height: 1.8;}
 
 
@@ -26,12 +26,14 @@ body, html {height: 100%;line-height: 1.8;}
   position: fixed;
   bottom: 23px;
   right: 28px;
-  width: 65px;
-  height:65px;
+  width: 75px;
+  height:75px;
   box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
   background-color: #4fce5d;
   z-index: 9;
 }
+
+
 
 
 
@@ -51,6 +53,10 @@ transform: translateX(-50%) translateY(-50%);
 background: url('images/bg.jpg') no-repeat; background-size: cover;  -webkit-transition: 1s opacity; transition: 1s opacity; }
 /*For IE*/
 video { display: block; }
+
+
+
+
 
 
 /*div { font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;   
@@ -105,6 +111,8 @@ h1, h2, h3, h4, h5, h6 {font-family: "Orbitron", sans-serif; font-weight: bold;t
   border: none; 
   margin: 1rem auto;/**/ 
 }
+
+.greenbtn {  background-color: #4fce5d;}
 
 section {margin-bottom:-10px!important}
 section a {font-family: "Raleway", sans-serif;font-size: 1.2rem;}
@@ -205,7 +213,7 @@ opacity: 1;
 
 
 
-<button class="open-button w3-btn w3-circle w3-large"><a href="https://wa.me/5551995409505"><i class="fa fa-whatsapp w3-text-white w3-xlarge w3-center"></i></a></button>
+<button class="open-button w3-btn w3-circle w3-large"><a href="https://wa.me/5551995409505"><i class="fa fa-whatsapp w3-text-white w3-xxlarge w3-center"></i></a></button>
 
 
 
@@ -221,7 +229,6 @@ opacity: 1;
 <div class="w3-content w3-padding-64">
 <h1 class="w3-center">Drone<wbr>Workz Imagens Aéreas</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
-<p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
 </div>
 
 </section>
@@ -241,11 +248,12 @@ opacity: 1;
   </div>
   <div class="w3-col w3-container m7 l8">  
     <h3 class="w3-center">Mercado Imobiliário</h3>
-    <p class="w3-center">Descubra todo o potencial do seu empreendimento!</p>
+    <span class="w3-center">Descubra todo o potencial do seu empreendimento!</span>
     <ul class="">
         <li>Imagem aérea do empreendimento</li>
         <li>Imagens da vizinhança do empreendimento</li>
     </ul>
+    <a href="#contato" class="w3-button w3-center w3-dark-gray calltoaction">Entrar em contato agora mesmo</a>
   </div>
 </div>
 
@@ -256,7 +264,7 @@ opacity: 1;
   <div class="w3-col w3-container m7 l8">  
     <h3 class="w3-center">Campanhas Publicitárias</h3>
     <p>Que tal incrementar sua produção com imagens impressionantes e criativas?<br>Agende hoje mesmo sua visita, sem compromisso!</p>
-    <a href="#contato" class="w3-button w3-center w3-dark-gray calltoaction">Entre em contato</a>
+    <a href="https://wa.me/5551995409505" class="w3-button w3-center calltoaction greenbtn w3-text-white">Envie agora uma mensagem pelo WhatsApp</a>
   </div>
 </div>
 
@@ -267,6 +275,7 @@ opacity: 1;
   <div class="w3-col w3-container m7 l8">  
     <h3 class="w3-center">Agricultura</h3>
     <p>Agora, você pode ter imagens em alta resolução de sua propriedade e plantação sem precisar contratar aeronaves de grande porte que envolvem um alto investimento.</p>
+    <a href="#contato" class="w3-button w3-center w3-dark-gray calltoaction">Entre em contato para saber mais</a>
   </div>
 </div>
 
@@ -277,6 +286,7 @@ opacity: 1;
   <div class="w3-col w3-container m7 l8">  
     <h3 class="w3-center">Esportes</h3>
     <p>Já pensou em ter toda a adrenalina do seu esporte registrada em vídeos e fotos de alta resolução?</p>
+    <a href="#contato" class="w3-button w3-center w3-dark-gray calltoaction">Vamos conversar!</a>
   </div>
 </div>
 <div class="w3-padding-64"></div>
@@ -294,17 +304,9 @@ opacity: 1;
 	<h2 class="w3-padding w3-content">Portfólio</h2>
 
 <div class="w3-content w3-padding-32">
-<p class="w3-panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.</p>
+<p class="w3-panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus.</p>
 </div>
   
-
-
-
-
-
-
-
-
 
 
   <!-- Photo grid -->
@@ -569,7 +571,7 @@ function onClick(element) {
 -->
 
 <div class="w3-content w3-padding-64">
-<p class="w3-panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus.</p>
+<p class="w3-panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus.</p>
 </div>
 
 
