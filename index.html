@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lazyframe/dist/lazyframe.css">
 
 <style>
 body { margin: 0; background-color:#000;}
@@ -105,6 +106,19 @@ section {margin-bottom:-10px!important}
 section a {font-family: "Raleway", sans-serif;font-size: 1.2rem;}
 
 
+
+
+/* youtube watermark */
+.watermark {
+
+}
+
+
+/*END youtube watermark*/
+
+
+
+
 </style>
 <meta charset=utf-8>
 </head>
@@ -144,7 +158,7 @@ section a {font-family: "Raleway", sans-serif;font-size: 1.2rem;}
 
 <div class="w3-display-container w3-center w3-mobile" style="height:100%" id="home">
   	<div class="w3-display-middle" style="white-space:nowrap;">
-    		<span class="w3-center"><img src="images/droneworkz.png" width="240px" alt="DroneWorkz">&nbsp;</span>
+    		<span class="w3-center"><img src="images/droneworkz-white-square.png" width="240px" alt="DroneWorkz" class="w3-circle w3-card">&nbsp;</span>
   	</div>
 </div>
 
@@ -169,7 +183,7 @@ section a {font-family: "Raleway", sans-serif;font-size: 1.2rem;}
 
 <div class="w3-content w3-padding-64">
 <h1 class="w3-center">Drone<wbr>Workz Imagens Aéreas</h1>
-<p>A Drone Workz atua na captação de imagens e filmagens aéreas com drones de alta tecnologia. Colocamos à sua disposição serviços com qualidade e segurança para atender às suas necessidades. Atuamos no mercado de construção civil, realizando fotografias do empreedimento e acompanhando os vários estágios de evolução da obra. Também criamos vídeos institucionais, além de trabalhar em eventos esportivos e corporativos, prestando serviço a agências, corretoras de imóveis entre outros.</p>
+<p>A Drone Workz atua na captação de imagens e filmagens aéreas com drones de alta tecnologia. Colocamos à sua disposição serviços com qualidade e segurança para atender às suas necessidades. Atuamos no mercado de construção civil, realizando fotografias do empreedimento e acompanhando os vários estágios de evolução da obra. Também criamos vídeos institucionais, além de trabalhar em eventos esportivos e corporativos, prestando serviço a agências de publicidade, corretoras de imóveis entre outros.</p>
 <p></p>
 </div>
 
@@ -254,43 +268,34 @@ section a {font-family: "Raleway", sans-serif;font-size: 1.2rem;}
   <!-- Photo grid -->
   <div class="w3-row">
     <div class="w3-third">
-     <img class="lazyload" data-sizes="auto" data-src="images/marketing_veiculos.jpg" data-srcset="images/marketing_veiculos_360w.jpg 360w, images/marketing_veiculos_426w.jpg 426w, images/marketing_veiculos_640w.jpg 640w, images/marketing_veiculos.jpg 854w" style="width:100%" onclick="document.getElementById('v01').style.display='block'" alt="Vídeo para marketing de veículos">
+     <img id="img01" class="lazyload" data-sizes="auto" data-src="images/marketing_veiculos.jpg" data-srcset="images/marketing_veiculos_360w.jpg 360w, images/marketing_veiculos_426w.jpg 426w, images/marketing_veiculos_640w.jpg 640w, images/marketing_veiculos.jpg 854w" style="width:100%" onclick="document.getElementById('v01').style.display='block'" alt="Vídeo para marketing de veículos">
 
-      <img class="lazyload" data-sizes="auto" data-src="images/video_colheita.jpg" data-srcset="images/video_colheita_360w.jpg 360w, images/video_colheita_426w.jpg 426w, images/video_colheita_640w.jpg 640w, images/video_colheita.jpg 854w" style="width:100%" onclick="document.getElementById('v02').style.display='block'"  alt="Filmagem de colheita com drone">
+      <img id="img02" class="lazyload" data-sizes="auto" data-src="images/video_colheita.jpg" data-srcset="images/video_colheita_360w.jpg 360w, images/video_colheita_426w.jpg 426w, images/video_colheita_640w.jpg 640w, images/video_colheita.jpg 854w" style="width:100%" onclick="document.getElementById('v02').style.display='block'"  alt="Filmagem de colheita com drone">
 
-      <img class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/g1Of-1GEG_w/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/g1Of-1GEG_w/mqdefault.jpg 320w, https://i.ytimg.com/vi/g1Of-1GEG_w/mqdefault.jpg 480w, https://i.ytimg.com/vi/g1Of-1GEG_w/sddefault.jpg 640w, https://i.ytimg.com/vi/g1Of-1GEG_w/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v03').style.display='block'" alt="Vídeo profissional de projeto arquitetônico">
+      <img id="img03" class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/g1Of-1GEG_w/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/g1Of-1GEG_w/mqdefault.jpg 320w, https://i.ytimg.com/vi/g1Of-1GEG_w/mqdefault.jpg 480w, https://i.ytimg.com/vi/g1Of-1GEG_w/sddefault.jpg 640w, https://i.ytimg.com/vi/g1Of-1GEG_w/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v03').style.display='block'" alt="Vídeo profissional de projeto arquitetônico">
     </div>
 
 
     <div class="w3-third">
-      <img class="lazyload" data-sizes="auto" data-src="images/estrutura_painel_solar_480w.jpg" ata-srcset="images/estrutura_painel_solar_480w.jpg 1366w, images/estrutura_painel_solar_854w.jpg 1920w" style="width:100%" onclick="document.getElementById('v04').style.display='block'" alt="Imagem feita com drone de estrutura para painéis solares">
+      <img id="img04" class="lazyload" data-sizes="auto" data-src="images/estrutura_painel_solar_480w.jpg" ata-srcset="images/estrutura_painel_solar_480w.jpg 1366w, images/estrutura_painel_solar_854w.jpg 1920w" style="width:100%" onclick="document.getElementById('v04').style.display='block'" alt="Imagem feita com drone de estrutura para painéis solares">
 
-      <img class="lazyload" data-sizes="auto" data-src="images/feira_do_livro_480w.jpg" data-srcset="images/feira_do_livro_320w.jpg 1024w, images/feira_do_livro_480w.jpg 1366w, images/feira_do_livro_854w.jpg 1920w, images/feira_do_livro_1280w.jpg 2x" style="width:100%" onclick="document.getElementById('v05').style.display='block'" alt="Vídeo de divulgação de evento cultural">
+      <img id="img05" class="lazyload" data-sizes="auto" data-src="images/feira_do_livro_480w.jpg" data-srcset="images/feira_do_livro_320w.jpg 1024w, images/feira_do_livro_480w.jpg 1366w, images/feira_do_livro_854w.jpg 1920w, images/feira_do_livro_1280w.jpg 2x" style="width:100%" onclick="document.getElementById('v05').style.display='block'" alt="Vídeo de divulgação de evento cultural">
 
-      <img class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/9NwqUO5aZks/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/9NwqUO5aZks/mqdefault.jpg 320w, https://i.ytimg.com/vi/9NwqUO5aZks/mqdefault.jpg 480w, https://i.ytimg.com/vi/9NwqUO5aZks/sddefault.jpg 640w, https://i.ytimg.com/vi/9NwqUO5aZks/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v06').style.display='block'" alt="">
+      <img id="img06" class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/9NwqUO5aZks/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/9NwqUO5aZks/mqdefault.jpg 320w, https://i.ytimg.com/vi/9NwqUO5aZks/mqdefault.jpg 480w, https://i.ytimg.com/vi/9NwqUO5aZks/sddefault.jpg 640w, https://i.ytimg.com/vi/9NwqUO5aZks/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v06').style.display='block'" alt="">
     </div>
 
 
 
     <div class="w3-third">
-      <img class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/el9QjZsb8-w/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/el9QjZsb8-w/mqdefault.jpg 320w, https://i.ytimg.com/vi/el9QjZsb8-w/mqdefault.jpg 480w, https://i.ytimg.com/vi/el9QjZsb8-w/sddefault.jpg 640w, https://i.ytimg.com/vi/el9QjZsb8-w/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v07').style.display='block'" alt="Imagens aéreas para divulgação de trabalho de floricultura">
+      <img id="img07" class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/el9QjZsb8-w/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/el9QjZsb8-w/mqdefault.jpg 320w, https://i.ytimg.com/vi/el9QjZsb8-w/mqdefault.jpg 480w, https://i.ytimg.com/vi/el9QjZsb8-w/sddefault.jpg 640w, https://i.ytimg.com/vi/el9QjZsb8-w/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v07').style.display='block'" alt="Imagens aéreas para divulgação de trabalho de floricultura">
 
-      <img class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/LidbWcyE0rU/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/LidbWcyE0rU/mqdefault.jpg 320w, https://i.ytimg.com/vi/LidbWcyE0rU/mqdefault.jpg 480w, https://i.ytimg.com/vi/LidbWcyE0rU/sddefault.jpg 640w, https://i.ytimg.com/vi/LidbWcyE0rU/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v08').style.display='block'" alt="Vídeo com drone de casa de alto padrão">
+      <img id="img08" class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/LidbWcyE0rU/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/LidbWcyE0rU/mqdefault.jpg 320w, https://i.ytimg.com/vi/LidbWcyE0rU/mqdefault.jpg 480w, https://i.ytimg.com/vi/LidbWcyE0rU/sddefault.jpg 640w, https://i.ytimg.com/vi/LidbWcyE0rU/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v08').style.display='block'" alt="Vídeo com drone de casa de alto padrão">
 
-      <img class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/MVdl4-HTT7c/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/MVdl4-HTT7c/mqdefault.jpg 320w, https://i.ytimg.com/vi/MVdl4-HTT7c/mqdefault.jpg 480w, https://i.ytimg.com/vi/MVdl4-HTT7c/sddefault.jpg 640w, https://i.ytimg.com/vi/MVdl4-HTT7c/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v09').style.display='block'" alt="Filmagem profissional de showroom">
+      <img id="img09" class="lazyload" data-sizes="auto" data-src="https://i.ytimg.com/vi/MVdl4-HTT7c/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/MVdl4-HTT7c/mqdefault.jpg 320w, https://i.ytimg.com/vi/MVdl4-HTT7c/mqdefault.jpg 480w, https://i.ytimg.com/vi/MVdl4-HTT7c/sddefault.jpg 640w, https://i.ytimg.com/vi/MVdl4-HTT7c/maxresdefault.jpg 1280w" style="width:100%" onclick="document.getElementById('v09').style.display='block'" alt="Filmagem profissional de showroom">
     </div>
   </div>
   
-  <!-- Modal for full size images on click-->
-  <!--
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-  -->
+
 
 <script>
 // Modal Image Gallery
@@ -316,70 +321,72 @@ function onClick(element) {
   <div id="v01" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if01'); ifr.src=ifr.src; document.getElementById('v01').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
+	<span id="close01" onclick="document.getElementById('v01').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if01" width="100%" height="315px" src="https://www.youtube.com/embed/pasWVJ41GKo?rel=0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/pasWVJ41GKo?rel=0" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder01"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/pasWVJ41GKo?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
+
 
   <!-- Modal for 2nd image on click-->
   <div id="v02" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if02'); ifr.src=ifr.src; document.getElementById('v02').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close02" onclick="document.getElementById('v02').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if02" width="100%" height="315px" src="https://www.youtube.com/embed/QlJnjIJvX9I?rel=0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/QlJnjIJvX9I?rel=0" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder02"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/QlJnjIJvX9I?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
+
 
   <!-- Modal for 3rd image on click-->
   <div id="v03" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if03'); ifr.src=ifr.src; document.getElementById('v03').style.display='none'" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close03" onclick="document.getElementById('v03').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if03" width="100%" height="315px" src="https://www.youtube.com/embed/g1Of-1GEG_w?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=g1Of-1GEG_w" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder03"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/g1Of-1GEG_w?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
+
 
   <!-- Modal for 4th image on click-->
   <div id="v04" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if04'); ifr.src=ifr.src; document.getElementById('v04').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close04" onclick="document.getElementById('v04').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if04" width="100%" height="315px" src="https://www.youtube.com/embed/49NOaOTuNoQ?rel=0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=49NOaOTuNoQ" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder04"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/49NOaOTuNoQ?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
-     
 
 
   <!-- Modal for 5th image on click-->
   <div id="v05" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if05'); ifr.src=ifr.src; document.getElementById('v05').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close05" onclick="document.getElementById('v05').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if05" width="100%" height="315px" src="https://www.youtube.com/embed/Yqd4vPUm5uo?rel=0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=Yqd4vPUm5uo" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder05"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/Yqd4vPUm5uo?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
@@ -390,12 +397,12 @@ function onClick(element) {
   <div id="v06" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if06'); ifr.src=ifr.src; document.getElementById('v06').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close06" onclick="document.getElementById('v06').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if06" width="100%" height="315px" src="https://www.youtube.com/embed/9NwqUO5aZks?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=9NwqUO5aZks" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder06"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/9NwqUO5aZks?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
@@ -405,12 +412,12 @@ function onClick(element) {
   <div id="v07" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if07'); ifr.src=ifr.src; document.getElementById('v07').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close07" onclick="document.getElementById('v07').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if07" width="100%" height="315px" src="https://www.youtube.com/embed/el9QjZsb8-w?rel=0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=el9QjZsb8-w" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder07"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/el9QjZsb8-w?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
@@ -420,12 +427,12 @@ function onClick(element) {
   <div id="v08" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if08'); ifr.src=ifr.src; document.getElementById('v08').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close08" onclick="document.getElementById('v08').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if08" width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=LidbWcyE0rU" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder08"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/LidbWcyE0rU?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
@@ -435,12 +442,12 @@ function onClick(element) {
   <div id="v09" class="w3-modal w3-animate-opacity">
    <div class="w3-modal-content w3-animate-opacity">
      <header class="w3-container w3-black"> 
-        <span onclick="var ifr=document.getElementById('if09'); ifr.src=ifr.src; document.getElementById('v09').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
+        <span id="close09" onclick="document.getElementById('v09').style.display='none';" class="w3-button w3-display-topright w3-red">&times;</span>
         <h6><i class="fa fa-play"></i></h6>
      </header>
     <div class="w3-container w3-center w3-black">
-        <iframe id="if09" width="100%" height="315px" src="https://www.youtube.com/embed/MVdl4-HTT7c?rel=0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div><p><a class="w3-btn" href="https://www.youtube.com/watch?v=MVdl4-HTT7c" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
+	<div id="iframeHolder09"></div>
+        <div><p><a class="w3-btn" href="https://www.youtube.com/embed/MVdl4-HTT7c?rel=0&autoplay=1" target="_blank">Assistir no <i class="fa fa-youtube w3-xxlarge"></i></a><br><br></p></div>
     </div>
    </div>
   </div>
@@ -468,7 +475,7 @@ function onClick(element) {
     <div class="w3-panel w3-col m8 w3-text-black w3-white w3-opacity-min w3-card">
       <h2>Contato</h2>
       <p>Agende já sua visita, sem compromisso!</p>
-      <p>&nbsp;<a href="https://wa.me/5551995409505" style="text-decoration:none;"><i class="fa fa-whatsapp w3-text-black w3-xlarge"></i>&nbsp;&nbsp;Enviar mensagem pelo <u>WhatsApp</u> agora</a></p>
+      <p>&nbsp;<a href="https://wa.me/5551995409505" style="text-decoration:none;"><i class="fa fa-whatsapp w3-text-black w3-xlarge"></i>&nbsp;&nbsp;Enviar mensagem pelo <u>WhatsApp</u></a></p>
       <p>&nbsp;<a href="tel:51995409505" style="text-decoration:none;"><i class="fa fa-phone w3-text-black w3-xlarge"></i>&nbsp;&nbsp;Ligue agora: <u>51 99540-9505</u></a></p>
       <p><i class="fa fa-envelope-o w3-text-black w3-xlarge"></i>&nbsp;&nbsp;Ou envie um e-mail para: <a href="mailto:droneworkz.imagens@gmail.com">droneworkz.imagens@gmail.com</a></p>
       <br>
@@ -526,6 +533,217 @@ function toggleFunction() {
 }
 </script>
 
+
+
+<!--LAZYFRAME
+  <script src="https://cdn.jsdelivr.net/npm/lazyframe/dist/lazyframe.min.js"></script>
+  <script>
+    lazyframe('.lazyframe');
+  </script>
+<!--LAZYFRAME END-->
+
+
+<!--create iframe onclick-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+//11111111111111111
+//Create iframe
+$(function(){
+    $('#img01').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder01').html('<iframe id="if01" width="100%" height="315px" src="https://www.youtube.com/embed/pasWVJ41GKo?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close01').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder01').html('<iframe id="if01" width="100%" height="315px" src="https://www.youtube.com/embed/pasWVJ41GKo?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+//22222222222222
+//Create iframe
+$(function(){
+    $('#img02').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder02').html('<iframe id="if02" width="100%" height="315px" src="https://www.youtube.com/embed/QlJnjIJvX9I?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close02').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder02').html('<iframe id="if02" width="100%" height="315px" src="https://www.youtube.com/embed/QlJnjIJvX9I?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+//333333333333333
+//Create iframe
+$(function(){
+    $('#img03').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder03').html('<iframe id="if03" width="100%" height="315px" src="https://www.youtube.com/embed/g1Of-1GEG_w?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close03').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder03').html('<iframe id="if03" width="100%" height="315px" src="https://www.youtube.com/embed/g1Of-1GEG_w?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+//444444444444444
+//Create iframe
+$(function(){
+    $('#img04').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder04').html('<iframe id="if04" width="100%" height="315px" src="https://www.youtube.com/embed/49NOaOTuNoQ?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close04').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder04').html('<iframe id="if04" width="100%" height="315px" src="https://www.youtube.com/embed/49NOaOTuNoQ?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+
+//55555555555555555
+//Create iframe
+$(function(){
+    $('#img05').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder05').html('<iframe id="if05" width="100%" height="315px" src="https://www.youtube.com/embed/Yqd4vPUm5uo?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close05').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder05').html('<iframe id="if05" width="100%" height="315px" src="https://www.youtube.com/embed/Yqd4vPUm5uo?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+
+//66666666666666
+//Create iframe
+$(function(){
+    $('#img06').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder06').html('<iframe id="if06" width="100%" height="315px" src="https://www.youtube.com/embed/9NwqUO5aZks?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close06').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder06').html('<iframe id="if06" width="100%" height="315px" src="https://www.youtube.com/embed/9NwqUO5aZks?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+
+//77777777777777
+//Create iframe
+$(function(){
+    $('#img07').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder07').html('<iframe id="if07" width="100%" height="315px" src="https://www.youtube.com/embed/el9QjZsb8-w?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close07').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder07').html('<iframe id="if07" width="100%" height="315px" src="https://www.youtube.com/embed/el9QjZsb8-w?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+//88888888888888
+//Create iframe
+$(function(){
+    $('#img08').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder08').html('<iframe id="if08" width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close08').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder08').html('<iframe id="if08" width="100%" height="315px" src="https://www.youtube.com/embed/LidbWcyE0rU?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+
+
+//99999999999999
+//Create iframe
+$(function(){
+    $('#img09').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder09').html('<iframe id="if09" width="100%" height="315px" src="https://www.youtube.com/embed/MVdl4-HTT7c?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//Reload iframe without autoplay for closing
+$(function(){
+    $('#close09').click(function(){
+        if(!$('#iframe').length) {
+                $('#iframeHolder09').html('<iframe id="if09" width="100%" height="315px" src="https://www.youtube.com/embed/MVdl4-HTT7c?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    });   
+});
+//END-----------
+
+
+
+
+</script>
+<!-- END create iframe onclick-->
 
 </body>
 </html>
